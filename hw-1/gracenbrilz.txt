@@ -1,0 +1,10 @@
+
+
+My experience with web arch has been incredibly varied. Most of the knowledge that I have comes from deciding to build something on the web and fumbling around for a seemingly infinite period of time until it works. I am most competent in CSS and html (and vaguely understand how to make these things from scratch), however I can almost constantly confused about JS, Jquery, and how all the pieces fit together. 
+
+
+    Two of my favorite features are:
+
+    - Chrome's incognito mode
+    - Using an obscene about of tabs in Chrome and FireFox to keep track of things I need to do/read
+    
