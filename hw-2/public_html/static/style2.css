@@ -1,0 +1,56 @@
+/*More body stylings*/
+
+div.logo {
+    width: 300px;
+    padding: 25px;
+    border: 12px solid navy;
+    margin: 25px;
+    position: fixed;
+    right:0;
+    bottom: 0;
+    text-align: right;
+}
+
+
+div.rest {
+	width: 600px;
+	padding: 25px;
+	left: 0;
+	top: 0;
+}
+
+
+
+
+h2.word_type {
+	font-style: italic;
+	padding-left: 0pt;
+}
+
+p.word_type {
+	font-style: italic;
+	padding-left: 0pt;
+}
+
+.second_def {
+	font-size: 14px
+}
+
+
+
+/*Links*/
+
+a {
+    color: navy;
+    text-decoration: none;
+}
+
+/*Lists styling*/
+ul, li {
+	list-style-type: none;
+	list-style-position: outside;
+	font-style: normal;
+	font-size: inherit;
+	display: block;
+
+}

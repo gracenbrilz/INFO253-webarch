@@ -1,5 +1,41 @@
+
+body {
+    background-color: #F3F4F4;
+    width: 1100px;
+}
+
+/*my name*/
 h1 {
-    color: magenta;
+    /*color: gray;*/
+    font-family: 'Open Sans', sans-serif;
+    font-size: 48pt;
+
 }
 
 
+/* PRIMARY verb or adject*/
+h2 {
+	font-family: 'Cardo', serif;
+	font-size: 16pt;
+	display: inline;
+}
+
+/*definitions*/
+h3 {
+	font-size: 14pt;
+	display: inline;
+
+}
+
+
+
+h4, p {
+	font-size: 11pt;
+	display: inline;
+	padding-left: 10pt;
+}
+
+
+p.new_ln {
+	display: block;
+}
