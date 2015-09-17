@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- stylesheet -->
+    <link rel="stylesheet" href="/static/style.css">
+
+<!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Cardo:400,400italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<div id="ajax-snippet"></div>
+
+    <h1>Madlibs</h1>
+
+    <!-- Mad lib form -->
+    <form id="madlibForm" method="POST">
+        <label for="name">Name: </label> 
+        <input type="text" id="name" name="name"><br>
+
+        <!-- Prefferred gender pronoun -->
+        <label for ="Pronoun">Preferred Gender Pronoun</label>
+        <select name="pronoun" id="pronoun">
+
+        <option value="They">they/them</option>
+        <option value="It">it</option>
+        <option value="She">she/her</option>
+        <option value="He">he/him</option>
+        <option value="Zi">zi/zirr</option> </select>
+
+
+<!-- number -->
+        <br><label for="number">Number: </label> 
+        <input type="text" id="number" name="number"><br>
+
+<!-- beverage -->
+        <label for="favBeverage">Fav Beverage: </label><br>
+        <input type="radio" id="beverage" name="beverage" value="coffee">Coffee<br>
+        <input type="radio" id="beverage" name="beverage" value="tea">Tea<br>
+        <input type="radio" id="beverage" name="beverage" value="water">Water<br>
+        <input type="radio" id="beverage" name="beverage" value="juice">Juice<br>
+
+<!-- random object -->
+        <label for="object">Random Objects (Select One): </label> <br>
+        <input type="checkbox" class="squaredOne" name="object" value= "dirt" id="dirt">Dirt<br>
+        <input type="checkbox" class="squaredOne" name="object" value= "rocks" id="rocks" >Rock<br>
+        <input type="checkbox" class="squaredOne" name="object" value= "cardboard" id="cardboard" >Cardboard<br>
+
+
+        <input type="submit" value="Create Story" />
+    </form>
+
+    <!-- Where your madlib story will appear -->
+    <div id="madlibStory">
+
+    </div>
+
+    <script src="/static/jquery-1.11.3.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,52 @@
+h1 {
+    /*color: gray;*/
+    font-family: 'Open Sans', sans-serif;
+    font-size: 48pt;
+    margin-left: 30px;
+
+}
+
+h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16pt;
+	display: inline;
+	margin-left: 50px;
+}
+
+#madlibForm {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16pt;
+	margin-left: 20px;
+
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+#beverage {
+	font-size: 20px;
+
+
+}
+
+#madlibStory {
+    border: 1px solid;
+    background-color: white;
+    height: 200px;
+    width: 400px;
+    margin-left: 50px;
+}
+
+select {
+    background-color: white;
+    font-size: 15px;
+}
+
+
+body {
+    background-color: #F3F4F4;
+}
+
+
+
