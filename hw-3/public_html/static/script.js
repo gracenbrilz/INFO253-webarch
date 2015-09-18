@@ -55,8 +55,7 @@ $("#madlibForm").submit(function() {
         else {
              madlibStory = "Literally nothing happened in " + nameValue +"'s life -- there had been nothing worth noting in the past " + numValue + " years. " 
              + pGpValue + " slowly meandered to a coffee shop and bought a somewhat expensive cup of " + bevVal + 
-             " but it really did taste like " + objectVal +". "
-             nameValue + " experienced another banal day.";
+             " but it really did taste like " + objectVal + ". " + nameValue + " experienced another banal day.";
                  
     }
 
