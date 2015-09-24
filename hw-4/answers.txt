@@ -1,0 +1,133 @@
+Using http://kayashaolu.pythonanywhere.com/
+
+• What is the return code for GET /home HTTP/1.1?
+
+	Retuns 200 -OK
+
+	Code:
+
+			GET /home HTTP/1.1 
+			HOST: kayashaolu.pythonanywhere.com
+
+			HTTP/1.1 200 OK
+			Server: ngx_openresty/1.4.3.6
+			Date: Wed, 23 Sep 2015 20:35:36 GMT
+			Content-Type: text/html; charset=utf-8
+			Content-Length: 52
+			Connection: keep-alive
+			X-Clacks-Overhead: GNU Terry Pratchett
+
+			<html><head></head><body><h1>HOME</h1></body></html>
+
+
+
+• What is the return code for GET /wiki HTTP/1.1?
+
+	Retuns 302 - found (redirect)
+
+	Code: 
+			GET /wiki HTTP/1.1
+			HOST: kayashaolu.pythonanywhere.com
+
+			HTTP/1.1 302 FOUND
+			Server: ngx_openresty/1.4.3.6
+			Date: Wed, 23 Sep 2015 20:37:50 GMT
+			Content-Type: text/html; charset=utf-8
+			Content-Length: 223
+			Connection: keep-alive
+			Location: http://kayashaolu.pythonanywhere.com/newwiki
+			X-Clacks-Overhead: GNU Terry Pratchett
+
+			<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+			<title>Redirecting...</title>
+			<h1>Redirecting...</h1>
+			<p>You should be redirected automatically to target URL: <a href="/newwiki">/newwiki</a>.  If not click the link.
+
+
+
+
+• What is the next HTTP statement a browser would send after this return code? (provide the statement as you would type it into telnet)
+
+	GET /newwiki HTTP/1.1 - where redirect is to
+
+
+• What is the return code for POST /wiki HTTP/1.1?
+
+	Returns 405 - method not allowed
+
+	Code:
+			POST /wiki HTTP/1.1
+			HOST: kayashaolu.pythonanywhere.com
+
+			HTTP/1.1 405 METHOD NOT ALLOWED
+			Server: ngx_openresty/1.4.3.6
+			Date: Wed, 23 Sep 2015 20:41:25 GMT
+			Content-Type: text/html
+			Content-Length: 183
+			Connection: keep-alive
+			Allow: PUT, HEAD, OPTIONS, GET
+
+			<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+			<title>405 Method Not Allowed</title>
+			<h1>Method Not Allowed</h1>
+			<p>The method POST is not allowed for the requested URL.</p>
+
+
+
+• Explain what happens when your browser loads http://ancestry.com (not http://www.ancestry.com) from sending the request to loading HTML
+
+	When I send GET request to http://ancestry.com server (66.43.22.183 80), the server sends me an HTTP response as well as the head and body data ("Document Moved, This document may be found at http://www.ancestry.com/) and redirects me (because of the 301) to the new location: http://www.ancestry.com/. 
+
+• What is the return code for http://ancestry.com?
+ 	
+ 	Returns 301 Moved Permanently
+
+	Code:
+			GET / HTTP/1.1
+			HOST:ancestry.com
+
+			HTTP/1.1 301 Moved Permanently
+			Cache-Control: no-cache
+			Content-Type: text/html; charset=UTF-8
+			Location: http://www.ancestry.com/
+			Server: Microsoft-IIS/7.5
+			Set-Cookie: TI.SI=0; path=/
+			Set-Cookie: TI=0; path=/
+			Set-Cookie: VARS=LCID=1033; domain=.ancestry.com; expires=Sun, 23-Sep-2035 20:46:40 GMT; path=/
+			X-Powered-By: ASP.NET
+			X-UA-Compatible: IE=Edge
+			Date: Wed, 23 Sep 2015 20:46:39 GMT
+			Connection: close
+			Content-Length: 147
+
+			<head><title>Document Moved</title></head>
+			<body><h1>Object Moved</h1>This document may be found <a HREF="http://www.ancestry.com/">here</a></body>
+
+• What is the return code for http://www.google.com/teapot?
+	
+	Returns 301 Moved Permanently
+
+	Code:
+			GET /teapot HTTP/1.1
+			host:google.com
+
+			HTTP/1.1 301 Moved Permanently
+			Location: http://www.google.com/teapot
+			Content-Type: text/html; charset=UTF-8
+			X-Content-Type-Options: nosniff
+			Date: Thu, 24 Sep 2015 16:09:18 GMT
+			Expires: Sat, 24 Oct 2015 16:09:18 GMT
+			Cache-Control: public, max-age=2592000
+			Server: sffe
+			Content-Length: 225
+			X-XSS-Protection: 1; mode=block
+
+			<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+			<TITLE>301 Moved</TITLE></HEAD><BODY>
+			<H1>301 Moved</H1>
+			The document has moved
+			<A HREF="http://www.google.com/teapot">here</A>.
+			</BODY></HTML>
+
+
+
