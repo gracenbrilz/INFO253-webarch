@@ -1,0 +1,71 @@
+
+• What HTTP command is used to make the http://127.0.0.1:5000/home resource respond with your full name (including spaces), the title of the page should be the full title of this class.
+
+	I found 'name' in app.py and replaces that key-value pair with my name, using %20 to add a space:
+
+	GET /home?name=Gracen%20Brilmyer HTTP/1.1
+	Host:localhost
+
+
+• Go to http://127.0.0.1:5000/redirect. Note how it redirects you to ischool.berkeley.edu. You can change this using a PUT or a POST request.
+• Use a PUT request to change the redirect target of http://127.0.0.1:5000/redirect from ischool.berkeley.edu to another location
+
+	Code:
+
+		PUT /redirect HTTP/1.1
+		Host: localhost
+		Content-Length: 32
+		Content-Type: application/x-www-form-urlencoded
+
+		location=http://www.google.com
+
+• How do you verify this change? Write out how in your answers.txt file
+	
+	I checked the content of the list by:
+
+		HTTP/1.0 200 OK
+		Content-Type: text/html; charset=utf-8
+		Content-Length: 145
+		Server: Werkzeug/0.9.6 Python/2.7.8
+		Date: Wed, 30 Sep 2015 19:51:04 GMT
+
+		<html>
+			<head>
+				<title>Redirect path changed</title>
+			</head>
+			<body>
+				<h1>/redirect now points to: http://www.google.com</h1>
+			</body>
+		</html>Connection closed by foreign host.
+
+
+	and
+		GET /redirect HTTP/1.1
+
+		HTTP/1.0 302 FOUND
+		Content-Type: text/html; charset=utf-8
+		Content-Length: 145
+		Location: http://www.google.com
+		Server: Werkzeug/0.9.6 Python/2.7.8
+		Date: Thu, 01 Oct 2015 03:31:50 GMT
+
+		<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+		<title>Redirecting...</title>
+		<h1>Redirecting...</h1>
+		<p>You should be redirected automatically to target URL: <a href="http://www.google.com</a>.  If not click the link.Connection closed by foreign host.
+
+	and
+		going to http://127.0.0.1:5000/redirect to see where I am redirected
+
+
+• Use a POST to update the redirect target of http://127.0.0.1:5000/redirect to another location. Write this POST request in your answers.txt file.
+
+		POST /redirect HTTP/1.1
+		Host: localhost
+		Content-Length: 98
+		Content-Type: application/x-www-form-urlencoded
+
+		location=http://opinionator.blogs.nytimes.com/2015/01/12/whats-wrong-with-all-lives-matter/?_r=1
+
+• Update app.py to correctly return an image from http://127.0.0.1:5000/image
+	Code: 	resp.headers['Content-Type'] = "image"

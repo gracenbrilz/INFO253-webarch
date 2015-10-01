@@ -67,8 +67,7 @@ def image():
 	in_file.close()
 
 	resp = make_response(data);
-	# Comment in to set header below
-	#resp.headers['Content-Type'] = ""
+	resp.headers['Content-Type'] = "image"
 
 	return resp
 
