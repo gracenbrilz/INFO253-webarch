@@ -1,1 +1,11 @@
 # Please enter answers for hw-6 here
+
+Use the Users resource to discover how many public repositories (public_repos) I have (kayashaolu): 2
+
+Use the Repositories resource to discover which repositories (full_name) I (kayashaolu) am an owner of: "kayashaolu/Spoon-Knife"
+
+Use the Repositories resources to find the logins of the contributors to the Drone-Lab-Scripts repository owned by davelester: 
+davelester
+nonmetalhail
+kayashaolu
+qqz
