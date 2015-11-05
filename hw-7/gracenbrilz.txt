@@ -1,0 +1,45 @@
+What series of IPs would a recursive DNS server use to find the address of www.ancestry.com?
+
+
+
+
+
+
+
+    - What series of IPs would a recursive DNS server use to find the address of www.ancestry.com?
+
+
+the root nameserver, then the .com nameserver, then ansestry.com nameserver
+
+    - What are the IP addresses of www.ancestry.com?
+
+66.43.22.183
+66.43.22.170
+
+Code:
+				host -v -t A ancestry.com;
+				 Trying "ancestry.com"
+				;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 12495
+				;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+				;; QUESTION SECTION:
+				;ancestry.com.			IN	A
+
+				;; ANSWER SECTION:
+				ancestry.com.		781	IN	A	66.43.22.183
+
+				host -v -t A www.ancestry.com
+				Trying "www.ancestry.com"
+				;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 42688
+				;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+				;; QUESTION SECTION:
+				;www.ancestry.com.		IN	A
+
+				;; ANSWER SECTION:
+				www.ancestry.com.	814	IN	A	66.43.22.170
+
+
+    - What is the IP address of your local app.py server?
+
+    127.0.0.1
