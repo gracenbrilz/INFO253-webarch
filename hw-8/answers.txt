@@ -1,0 +1,57 @@
+• SELECT
+
+• How many players make more than $4,000,000? 23
+|             Team |              Player |   Salary |      Position |
+|------------------|---------------------|----------|---------------|
+| New York Yankees |      Clemens  Roger | 10100000 |       Pitcher |
+| New York Yankees |     Contreras  Jose |  5500000 |       Pitcher |
+| New York Yankees |       Giambi  Jason | 11428571 | First Baseman |
+| New York Yankees | Hitchcock  Sterling |  6000000 |       Pitcher |
+| New York Yankees |        Jeter  Derek | 15600000 |     Shortstop |
+| New York Yankees |       Karsay  Steve |  5000000 |       Pitcher |
+| New York Yankees |      Matsui  Hideki |  6000000 |    Outfielder |
+| New York Yankees |       Mondesi  Raul | 13000000 |    Outfielder |
+| New York Yankees |       Mussina  Mike | 12000000 |       Pitcher |
+| New York Yankees |      Pettitte  Andy | 11500000 |       Pitcher |
+| New York Yankees |       Posada  Jorge |  8000000 |       Catcher |
+| New York Yankees |     Rivera  Mariano | 10500000 |       Pitcher |
+| New York Yankees |      Ventura  Robin |  5000000 | Third Baseman |
+| New York Yankees |        Weaver  Jeff |  4150000 |       Pitcher |
+| New York Yankees |    Williams  Bernie | 12357143 |    Outfielder |
+|   Anaheim Angels |    Anderson  Garret |  5350000 |    Outfielder |
+|   Anaheim Angels |       Appier  Kevin | 11500000 |       Pitcher |
+|   Anaheim Angels |       Erstad  Darin |  7250000 |    Outfielder |
+|   Anaheim Angels |         Glaus  Troy |  7250000 | Third Baseman |
+|   Anaheim Angels |      Percival  Troy |  7833333 |       Pitcher |
+|   Anaheim Angels |         Salmon  Tim |  9900000 |    Outfielder |
+|   Anaheim Angels |         Sele  Aaron |  8166667 |       Pitcher |
+|   Anaheim Angels |      Spiezio  Scott |  4250000 | First Baseman |
+
+• How many pitchers are in this list? 11
+
+
+
+
+• INSERT
+
+• Insert yourself as a player for the San Francisco Giants with a $1,000,000 salary at the position of pitcher
+
+INSERT INTO Players
+    (`Team`, `Player`, `Salary`, `Position`)
+VALUES
+    ('San Francisco Giants', 'Brilmyer Gracen', 100000, 'Pitcher')
+;
+
+• Is it possible that someone querying the database at the same time could see your insert partially complete (eg. only see some fields filled in)? What database property is this related to? 
+No, due to the Atomicity property. Either all updates happen or none do.
+
+• UPDATE
+
+• You got a raise: update your player’s salary to $2,000,000
+
+UPDATE	
+  Players	
+SET	
+  Salary	=	‘2000000'	
+WHERE 
+  Player = ‘Brilmyer Gracen’;
