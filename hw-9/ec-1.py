@@ -15,18 +15,17 @@ class MRWordCounter(MRJob):
 
 	def mapper(self, key, line):
 		words  = line.split(',')
-		yield words[1], 1
+		yield words[2], 1
 
 
 	# Write your reducer class here
 	def reducer(self, word, occurrences):
 		total = sum(occurrences)
-		if total>400:
-			self.allwords[word] = total
+		self.allwords[word] = total
 
 	def reducer_2(self):
 		sorted_x = sorted(self.allwords.items(), key=operator.itemgetter(1), reverse=True)
-		for x in sorted_x:
+		for x in sorted_x[:10]:
 			yield x
 	
 	def steps(self):
